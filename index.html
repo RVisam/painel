@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="5">
     <title>Painel VISAM</title>
 </head>
 <body>
@@ -19,25 +20,5 @@
     frameborder="0" allowfullscreen="">
   </iframe>
 </div>
-    <script>
-        window.setInterval(function() {
-            reloadIFrame()
-        }, 15);
-
-        function reloadIFrame() {
-            console.log('reloading..');
-            document.getElementById('funcionarios').contentWindow.location.reload();
-        }
-        ;
-                window.setInterval(function() {
-            reloadIFrame()
-        }, 15);
-
-        function reloadIFrame() {
-            console.log('reloading..');
-            document.getElementById('informativos').contentWindow.location.reload();
-        }
-    </script>
-    
 </body>
 </html>
