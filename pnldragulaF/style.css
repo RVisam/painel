@@ -1,0 +1,98 @@
+.cabecalho {
+  background-color: black;
+  color: azure;
+  min-height: 10%;
+  background-color: whitesmoke;
+}
+
+.cabecalhoi {
+  min-height: 10%;
+  background-color: rgb(0, 45, 143);
+}
+
+.rodape {
+  min-height: 10%;
+  background-color: black;
+}
+
+.atividade {
+  background-color: whitesmoke;
+  color: rgb(0, 0, 0);
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+
+.local {
+  background-color: rgb(16, 63, 102);
+  color: azure;
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+
+.ausencia {
+  background-color: rgb(13, 92, 10);
+  color: azure;
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+
+.equipe {
+  background-color: rgb(48, 116, 180);
+  color: azure;
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+
+.funcionario {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+
+.motorista {
+  background-color: rgb(78, 12, 12);
+  color: azure;
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+
+.veiculos {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+
+.corpototal {
+  height: 100vh;
+}
+
+.corpoatividade {
+  height: 20vh;
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+
+.completar {
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+
+.tempo {
+  font-family: "Martian Mono", sans-serif;
+  font-size: 2vw;
+}
+
+#painel::backdrop {
+  background-color: rgb(255, 255, 255);
+}

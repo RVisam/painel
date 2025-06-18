@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel VISAM</title>
+    <!--Bootstrap CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.23.1/dist/css/uikit.min.css"
+    />
+    <!--Personal CSS-->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Dragula CSS-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/dragula@3.7.3/dist/dragula.min.css"
+    />
+    <!-- Highlight CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    />
+    <!-- Fontes-->
+    <link href="https://fonts.cdnfonts.com/css/martian-mono" rel="stylesheet" />
+    <!-- Editor JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/link@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/image@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/simple-image"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/quote@2.7.6/dist/quote.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid text-center corpototal">
+      <div class="row">
+        <div uk-filter="target: .itens" class="col-2">
+          <ul class="uk-tab uk-flex-center">
+            <li class="uk-active" uk-filter-control=".tag-atividades">
+              <a href="#">ATIVIDADES</a>
+            </li>
+            <li uk-filter-control=".tag-funcionarios">
+              <a href="#">FUNCIONÁRIOS</a>
+            </li>
+            <li uk-filter-control=".tag-motoristas">
+              <a href="#">MOTORISTAS</a>
+            </li>
+            <li uk-filter-control=".tag-veiculos">
+              <a href="#">VEÍCULOS</a>
+            </li>
+          </ul>
+
+          <div
+            class="flex-fill overflow-auto p-1 border border-black rounded-4 border-3"
+            style="height: 85vh"
+          >
+            <ul class="itens list-group">
+              <!-- Atividades -->
+              <li class="tag-atividades list-group" id="atividades">
+                <div class="list-group-item atividade">ADMINISTRATIVO</div>
+                <div class="list-group-item atividade">APOIO DIRETAS</div>
+                <div class="list-group-item atividade">APOIO VETORES</div>
+                <div class="list-group-item atividade">ATIVIDADE EDUCATIVA</div>
+                <div class="list-group-item atividade">BUSCA ATIVA - RAIVA</div>
+                <div class="list-group-item atividade">CASA A CASA</div>
+                <div class="list-group-item atividade">COORDENAÇÃO</div>
+                <div class="list-group-item atividade">COLETA DE ÁGUA</div>
+                <div class="list-group-item atividade">
+                  CONTROLE DE PEÇONHENTOS E SINANTRÓPICOS
+                </div>
+                <div class="list-group-item atividade">CURSO / TREINAMENTO</div>
+                <div class="list-group-item atividade">
+                  ESTAÇÕES DISSEMINADORAS
+                </div>
+                <div class="list-group-item atividade">OVITRAMPAS</div>
+                <div class="list-group-item atividade">ESTATÍSTICA</div>
+                <div class="list-group-item atividade">FISCALIZAÇÃO</div>
+                <div class="list-group-item atividade">IMÓVEIS ESPECIAIS</div>
+                <div class="list-group-item atividade">ÍNDICE DE BRETEAU</div>
+                <div class="list-group-item atividade">
+                  INVESTIGAÇÃO EPIDEMIOLÓGICA
+                </div>
+                <div class="list-group-item atividade">LABORATÓRIO</div>
+                <div class="list-group-item atividade">LIMPEZA</div>
+                <div class="list-group-item atividade">NEBULIZAÇÃO</div>
+                <div class="list-group-item atividade">OBSERVAÇÃO ANIMAL</div>
+                <div class="list-group-item atividade">
+                  PESQUISA DE LEISHMANIOSE
+                </div>
+                <div class="list-group-item atividade">
+                  PESQUISA PARASITOLÓGICA
+                </div>
+                <div class="list-group-item atividade">PONTOS ESTRATÉGICOS</div>
+                <div class="list-group-item atividade">RESGATE</div>
+                <div class="list-group-item atividade">REUNIÃO</div>
+                <div class="list-group-item atividade">VISTORIA</div>
+                <div class="list-group-item local">CAMPINAS</div>
+                <div class="list-group-item local">SÃO PAULO</div>
+                <div class="list-group-item local">
+                  VIGILÂNCIA EPIDEMIOLÓGICA
+                </div>
+                <div class="list-group-item ausencia">AFASTAMENTO</div>
+                <div class="list-group-item ausencia">ATESTADO</div>
+                <div class="list-group-item ausencia">BANCO DE HORAS</div>
+                <div class="list-group-item ausencia">FALTA ABONADA</div>
+                <div class="list-group-item ausencia">FÉRIAS</div>
+                <div class="list-group-item equipe">EQUIPE 1</div>
+                <div class="list-group-item equipe">EQUIPE 2</div>
+                <div class="list-group-item equipe">EQUIPE 3</div>
+                <div class="list-group-item equipe">EQUIPE 4</div>
+                <div class="list-group-item equipe">EQUIPE 5</div>
+              </li>
+              <!-- Funcionarios -->
+              <li class="tag-funcionarios list-group" id="funcionarios">
+                <div class="list-group-item funcionario">ACS</div>
+                <div class="list-group-item funcionario">ANA</div>
+                <div class="list-group-item funcionario">CARINE</div>
+                <div class="list-group-item funcionario">CAROL</div>
+                <div class="list-group-item funcionario">DANIEL</div>
+                <div class="list-group-item funcionario">DONIZETTI</div>
+                <div class="list-group-item funcionario">ELISA</div>
+                <div class="list-group-item funcionario">EMERSON</div>
+                <div class="list-group-item funcionario">FELIPE</div>
+                <div class="list-group-item funcionario">GABRIELA</div>
+                <div class="list-group-item funcionario">GABRIELA CRISTINE</div>
+                <div class="list-group-item funcionario">GUSTAVO</div>
+                <div class="list-group-item funcionario">IGOR</div>
+                <div class="list-group-item funcionario">IVONE</div>
+                <div class="list-group-item funcionario">
+                  JOÃO ALMEIDA
+                </div>
+                <div class="list-group-item funcionario">MARCEL</div>
+                <div class="list-group-item funcionario">MÁRCIA ANTÔNIA</div>
+                <div class="list-group-item funcionario">MÁRCIA REGINA</div>
+                <div class="list-group-item funcionario">MARIA INÊS</div>
+                <div class="list-group-item funcionario">MICHEL</div>
+                <div class="list-group-item funcionario">NEUZA</div>
+                <div class="list-group-item funcionario">
+                  RAFAEL
+                </div>
+                <div class="list-group-item funcionario">RAUL</div>
+                <div class="list-group-item funcionario">
+                  RODRIGO
+                </div>
+                <div class="list-group-item funcionario">ROSELI</div>
+                <div class="list-group-item funcionario">TARCÍSIO</div>
+                <div class="list-group-item funcionario">TIAGO</div>
+                <div class="list-group-item funcionario">VALTER</div>
+                <div class="list-group-item funcionario">YASMIN</div>
+              </li>
+              <!-- Motoristas -->
+              <li class="tag-motoristas list-group" id="motoristas">
+                <div class="list-group-item motorista">CARLOS</div>
+                <div class="list-group-item motorista">DITINHO</div>
+                <div class="list-group-item motorista">GESIEL</div>
+                <div class="list-group-item motorista">GILDÁSIO</div>
+                <div class="list-group-item motorista">JOSÉ LUIZ</div>
+                <div class="list-group-item motorista">MARCIEL</div>
+                <div class="list-group-item motorista">MARCOS</div>
+                <div class="list-group-item motorista">
+                  MOTORISTA SUBSTITUTO
+                </div>
+                <div class="list-group-item motorista">VICENTE</div>
+                <div class="list-group-item motorista">WILLIAN</div>
+              </li>
+
+              <!-- Veiculos-->
+              <li class="tag-veiculos list-group" id="veiculos">
+                <div class="list-group-item veiculos">
+                  <img
+                    width="30"
+                    height="30"
+                    src="https://img.icons8.com/pulsar-line/48/suv-2.png"
+                    style="filter: invert(100%)"
+                    alt="suv-2"
+                  />
+                  DOBLÔ
+                </div>
+                <div class="list-group-item veiculos">
+                  <img
+                    width="30"
+                    height="30"
+                    src="https://img.icons8.com/pulsar-line/48/sedan.png"
+                    style="filter: invert(100%)"
+                    alt="sedan"
+                  />
+                  ONIX
+                </div>
+                <div class="list-group-item veiculos">
+                  <img
+                    width="30"
+                    height="30"
+                    src="https://img.icons8.com/pulsar-line/48/pickup.png"
+                    style="filter: invert(100%)"
+                    alt="pickup"
+                  />
+                  OROCH
+                </div>
+                <div class="list-group-item veiculos">
+                  <img
+                    width="30"
+                    height="30"
+                    src="https://img.icons8.com/pulsar-line/48/pickup.png"
+                    style="filter: invert(100%)"
+                    alt="pickup"
+                  />
+                  S-10
+                </div>
+                <div class="list-group-item veiculos">
+                  <img
+                    width="30"
+                    height="30"
+                    src="https://img.icons8.com/pulsar-line/48/pickup.png"
+                    style="filter: invert(100%)"
+                    alt="pickup"
+                  />
+                  STRADA
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="d-flex">
+            <!-- Botões-->
+            <button onclick="openFullscreen();" class="uk-button-text p-2 m-1">
+              Tela Cheia
+            </button>
+          </div>
+        </div>
+        <div class="row col-10 g-0">
+          <div class="corpototal" id="painel">
+            <!-- Navegacao -->
+            <nav class="uk-navbar uk-navbar-container" style="height: 10vh">
+              <div class="uk-navbar-item uk-align-left m-2">
+                <img
+                  src="LogoCompleto.png"
+                  style="height: 8vh; min-width: 8vw"
+                />
+              </div>
+              <!-- Data -->
+              <h1
+                id="dia"
+                class="uk-align-center uk-margin-remove-right tempo"
+              ></h1>
+              <h1
+                id="time"
+                class="uk-align-center uk-margin-remove-left tempo"
+              ></h1>
+            </nav>
+            <!-- Teste -->
+
+            <div class="row completar">
+              <div class="col-8 row container-fluid">
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalA"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalA"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalA"
+                  ></div>
+                </div>
+
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalB"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalB"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalB"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalC"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalC"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalC"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalD"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalD"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalD"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalE"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalE"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalE"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalF"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalF"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalF"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalG"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalG"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalG"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalH"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalH"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalH"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalI"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalI"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalI"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalJ"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalJ"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalJ"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalK"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalK"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalK"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalL"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalL"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalL"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalM"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalM"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalM"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalN"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalN"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalN"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalO"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalO"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalO"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalP"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalP"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalP"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalQ"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalQ"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalQ"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalR"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalR"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalR"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalS"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalS"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalS"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalT"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalT"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalT"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalU"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalU"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalU"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalV"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalV"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalV"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalW"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalW"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalW"
+                  ></div>
+                </div>
+                <div class="col-2 corpoatividade d-flex card">
+                  <div
+                    class="card-header atividades cabecalho"
+                    id="atividadesFinalX"
+                  ></div>
+                  <div
+                    class="card-body flex-fill funcionarios"
+                    id="funcionariosFinalX"
+                  ></div>
+                  <div
+                    class="card-footer veiculos rodape"
+                    id="veiculosFinalX"
+                  ></div>
+                </div>
+              </div>
+              <div class="col-4 m-2">
+                <div
+                  class="border border-black rounded-4 border-4"
+                  style="height: 80vh"
+                >
+                  <div class="cabecalhoi">
+                    <h1 style="color: azure">INFORMATIVOS</h1>
+                  </div>
+                  <div id="editorjs" style="height: 80vh"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.1/dist/js/uikit-icons.min.js"></script>
+    <!--Highlight JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- Dragula JS-->
+    <script src="https://cdn.jsdelivr.net/npm/dragula@3.7.3/dist/dragula.min.js"></script>
+
+    <!-- Personal-->
+    <script src="script.js"></script>
+  </body>
+</html>
