@@ -3,23 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="15">
     <title>Painel VISAM</title>
 </head>
 <body>
 <div>
-  <iframe width="100%" height="700px"
+  <iframe id="funcionarios" width="100%" height="700px"
     src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS-5yFsUQw-FNv_xK4X-nSD7wJBXNVPNb2yW9SN5gT8SbIKBmqJkmRwPZ27udxgLRm-uDsds3EPLcxk/pubhtml?gid=689257506&amp;single=true&amp;widget=true&amp;headers=false"
     frameborder="0" allowfullscreen="">
   </iframe>
 </div>
 
 <div>
-  <iframe width="100%" height="100px"
+  <iframe id="informativos" width="100%" height="100px"
     src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS-5yFsUQw-FNv_xK4X-nSD7wJBXNVPNb2yW9SN5gT8SbIKBmqJkmRwPZ27udxgLRm-uDsds3EPLcxk/pubhtml?gid=463070103&amp;single=true&amp;widget=true&amp;headers=false"
     frameborder="0" allowfullscreen="">
   </iframe>
 </div>
+    <script>
+        window.setInterval(function() {
+            reloadIFrame()
+        }, 3000);
 
+        function reloadIFrame() {
+            console.log('reloading..');
+            document.getElementById('funcionarios').contentWindow.location.reload();
+        }
+        
+                window.setInterval(function() {
+            reloadIFrame()
+        }, 3000);
+
+        function reloadIFrame() {
+            console.log('reloading..');
+            document.getElementById('informativos').contentWindow.location.reload();
+        }
+    </script>
+    
 </body>
 </html>
